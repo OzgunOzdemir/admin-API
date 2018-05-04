@@ -35,4 +35,12 @@ app.get('/showUser/:id', function(req,res){
 	});
 })
 
+app.delete('/delete/:id', function(req,res){
+	fs.readFile(__dirname + "/" + "users.json", 'utf8', function(err, data){
+		var users = JSON.parse(data);
+		delete users["user" + req.params.id];
+		res.end(JSON.stringify(users));
+	});
+})
+
 module.exports = app;
