@@ -27,4 +27,12 @@ app.post('/addUser', function(req, res) {
 	});
 })
 
+app.get('/showUser/:id', function(req,res){
+	fs.readFile(__dirname + "/" + "users.json", 'utf8', function(err, data){
+		var users = JSON.parse(data);
+		var user = users["user" + req.params.id];
+		res.end(JSON.stringify(user));
+	});
+})
+
 module.exports = app;
