@@ -8,13 +8,13 @@
    "user2" : {
       "name" : "Gürol",
 	  "password" : "password2",
-	  "profession" : "Project Manager",
+	  "job" : "Project Manager",
 	  "id": 2
    },
    "user3" : {
       "name" : "Ugur",
 	  "password" : "password3",
-	  "profession" : "Software Developer",
+	  "job" : "Software Developer",
 	  "id": 3
    }
 }
